@@ -32,6 +32,28 @@ es6数组的[filter](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Ref
 
 ```
 
+### objectPick\<T extends { [i: string]: any } = {}\>(data: T, keys: (keyof T)[]): any
+
+从对象中截取指定的key数据
+
+`data` 数据
+`keys` 需要选中的key
+
+```js
+  var data = {
+    a: 1,
+    b: true,
+    c: function() {},
+    d: '哈哈'
+  };
+
+  data = $.OYTool.objectPick(data, ['a', 'b']);
+
+  console.log(data);
+  // {a: 1, b: true}
+
+```
+
 ### styles(data: { [i: string]: string }): string
 
 将对象类型的style转换为字符串类型的样式文本
@@ -88,7 +110,11 @@ es6数组的[filter](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Ref
 
 ### formSubmit(url = '', data: { [i: string]: any }, method = 'get'): void
 
-表单提交
+通过HTML表单提交
+
+`url` 地址
+`data` 表单数据
+`method` 提交方法。默认为 get 方法 
 
 ```js
   $.OYTool.formSubmit(context.PATH + urlMap.search, formData)
@@ -96,8 +122,25 @@ es6数组的[filter](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Ref
 
 ### mergeQueryParam(param: { [i: string]: any }, map = getStringVavlueFilterParamMap()):void
 
-将url中的query查询参数拼接成filter筛选器中的参数
+将url中的query查询参数拼接成filter筛选器中的参数  
+
+`param` url query参数
+`map` 不需要传递
 
 ```js
 $.OYTool.mergeQueryParam($.OYTool.paseQuery());
 ```
+
+### getDefaultSortData(): any
+
+获取默认的排序数据
+
+```js
+$.OYTool.getDefaultSortData();
+```
+
+### convertFastQueryParams(jsonParam: { [i: string]: any }) :any
+
+将pc端旧的快查参数转换成为新的参数  
+
+`jsonParam` 保存的快捷参数
