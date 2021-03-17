@@ -6,6 +6,50 @@
 
 插件的编写形式一定程度上有React组件化思想的影响。所以在组件使用时。我们默认遵守一定的约定
 
+### 插件列表
+
+插件按照功能分类分为三大类。其中基础组件是提供了基础的UI组件。
+
+主组件
+
+- [OYSearch 搜索框](./docs/OYSearch.md)
+- [OYFilter  筛选器](./docs/OYFilter.md)
+- [OYOrderBar  排序组件](./docs/OYOrderBar.md)
+
+工具组件
+
+- [OYTool  工具方法](./docs/OYTool.md)
+
+基础组件
+
+- OYFilterBar
+- OYIndustryComponet
+- OYTab
+- OYTag
+- OYButton
+- OYInput
+- OYInputRange
+- OYSelect
+- OYCheckbox
+- OYCheckbox2
+- OYRadio
+- OYRadioCheckbox
+- OYDropdownInput
+- OYDropdownInputRange
+- OYCategoryTab
+
+业务型组件
+
+- OYFilterBarSaveList
+- OYSpecification
+- OYBalanceWeight
+- OYFlag
+- OYProductProp
+- OYProductType
+
+[组件生命周期](./docs/ComponentLifeCycle.md)  
+[组件渲染流程](./docs/Componet.md)
+
 ### 参数(props)
 
 插件的更新修改。都是通过传递参数值插件内部。插件会根据传入的参数自行渲染更新内容
@@ -119,43 +163,3 @@ filter.on(['onComponentDidMount', 'onRender'], () => {
 })
 ```
 
-### 插件列表
-
-插件按照功能分类分为三大类。其中基础组件是提供了基础的UI组件。
-
-主组件
-
-- [OYSearch 搜索框](./docs/OYSearch.md)
-- [OYFilter  筛选器](./docs/OYFilter.md)
-- [OYOrderBar  排序组件](./docs/OYOrderBar.md)
-
-工具组件
-
-- [OYTool  工具方法](./docs/OYTool.md)
-
-基础组件
-
-- OYFilterBar
-- OYIndustryComponet
-- OYTab
-- OYTag
-- OYButton
-- OYInput
-- OYInputRange
-- OYSelect
-- OYCheckbox
-- OYCheckbox2
-- OYRadio
-- OYRadioCheckbox
-- OYDropdownInput
-- OYDropdownInputRange
-- OYCategoryTab
-
-业务型组件
-
-- OYFilterBarSaveList
-- Specification
-- BalanceWeight
-- Flag
-- ProductProp
-- ProductType
